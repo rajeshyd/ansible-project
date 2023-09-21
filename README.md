@@ -19,18 +19,20 @@ server_1 ansible_host=3.139.101.66
 ansible_ssh_private_key_file=/home/ubuntu/keys/ansible-key-master.pem
 
 
-Check number of nodes connect:-
-ansible all --list -hosts
-
 connection establish then:-
-1:- ansible -m ping dbservers
+
+1:- ansible -m ping dbservers 
+
 2:- ansible -m ping redisservers
+
 3:- ansible -m ping nginxservers
 
 write playbook (write in repo) and run playbook command:-
 
 ansible-playbook install_mysql.yaml
+
 ansible-playbook install_redis.yaml
+
 ansible-playbook install_nginx.yaml
 
 check all in node side:-
